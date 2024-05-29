@@ -36,12 +36,13 @@ public class Javamongo {
         FindIterable<Document> doc
                 = collection.find(and(eq("username", username), eq("password", password)));
         if (doc == null) {
-            System.out.println("No results found.");
+            System.out.println("User not Found");
         } else {
             System.out.println("Login Successful");
             System.out.println("=====================================================================");
             System.out.println();
             System.out.println();
+            System.exit(0);
         }
 
     }
